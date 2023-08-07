@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 return [
     'route' => [
@@ -81,7 +81,7 @@ return [
                 'categories' => \App\GraphQL\Queries\Category\CategoriesQuery::class,
             ],
             'mutation' => [
-    'createQuest' => \App\GraphQL\Mutations\Quest\CreateQuestMutation::class,
+                'createQuest' => \App\GraphQL\Mutations\Quest\CreateQuestMutation::class,
                 'updateQuest' => \App\GraphQL\Mutations\Quest\UpdateQuestMutation::class,
                 'deleteQuest' => \App\GraphQL\Mutations\Quest\DeleteQuestMutation::class,
                 'createCategory' => \App\GraphQL\Mutations\Category\CreateCategoryMutation::class,
@@ -92,9 +92,9 @@ return [
             'method' => ['get', 'post'],
         ],
     ],
-		'types' => [
-    'Quest' => \App\GraphQL\Types\QuestType::class,
-       'Category' => \App\GraphQL\Types\CategoryType::class
+    'types' => [
+        'Quest' => \App\GraphQL\Types\QuestType::class,
+        'Category' => \App\GraphQL\Types\CategoryType::class
     ],
 
     // The global types available to all schemas.

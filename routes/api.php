@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::group(['prefix' => 'graphql'], function () {
+    Route::get('/', [
+        'as' => 'graphql.query',
+        'uses' => '\Rebing\GraphQL\GraphQLController@query',
+    ]);
+    Route::post('/', [
+        'as' => 'graphql.query',
+        'uses' => '\Rebing\GraphQL\GraphQLController@query',
+    ]);
+});
